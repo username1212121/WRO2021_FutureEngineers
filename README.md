@@ -13,7 +13,8 @@ Our robot is a four-wheeled vehicle with differential rotation of the rear wheel
 <h3>Arduino Uno Board</h3>
 	<p>Arduino/Genuino Uno is a microcontroller board based on the ATmega328P.
 	We use it to program our robot.</br>
-	About Arduino Uno Board https://www.arduino.cc/en/Main/ArduinoBoardUno/</p>
+	About Arduino Uno Board https://www.arduino.cc/en/Main/ArduinoBoardUno/</br>
+	To program the Arduino Uno Board, we use the Arduino IDE version 1.8.15, you can get it here https://www.arduino.cc/en/software</p>
   
 ![Image of ArduinoUnoBoard](https://github.com/Glaurung2000/images/blob/master/1390133.jpg)
 
@@ -28,7 +29,10 @@ Our robot is a four-wheeled vehicle with differential rotation of the rear wheel
 ![Image of SonarHCSR04](https://github.com/Glaurung2000/images/blob/master/ultrasonic-hc-sr04.1.jpg)
 	
 <h3>Applied Robotics TrackingCam</h3>
-	<p>We use TrackingCam to detect traffic signs and determine their color.
+	<p>TrackingCam it is a computer vision module capable of recognizing both monochrome objects and objects consisting of several colors.</br> 
+	To configure the camera to recognize certain objects, you need to install a special application.</br>
+	You can get it here https://yadi.sk/d/fqNfFFCnKqz7UA</br>
+	We use TrackingCam to detect traffic signs and determine their color.
 	To transfer data from the TrackingCam to Arduino Uno Board, we use the I2C interface, for this we use TrackingCamI2C library.</br>
   	You can get it here https://yadi.sk/d/SqLnRoai1HeVGg</br>
 	About TrackingCam https://docviewer.yandex.ru/view/502104293/?*=H8tzg5x50SJp33D6wKdMkln2EE17InVybCI6InlhLWRpc2stcHVibGljOi8vb0hYbS9FRHdXeklnWmhwSUpsSG0xNWpMT24rMGtVRzdjTkJHcWp4TTBxY3hPUFRYUGJnWWpvenN3V0NlWFVRcnEvSjZicG1SeU9Kb25UM1ZvWG5EYWc9PSIsInRpdGxlIjoi0KPRh9C10LHQvdC%2B0LUg0L%2FQvtGB0L7QsdC40LUgwqvQotC10YXQvdC40YfQtdGB0LrQvtC1INC30YDQtdC90LjQtSDRgNC%2B0LHQvtGC0L7QsiDRgSDQuNGB0L%2FQvtC70YzQt9C%2B0LLQsNC90LjQtdC8IFRyYWNraW5nQ2FtwrtfcHVibGljLnBkZiIsIm5vaWZyYW1lIjpmYWxzZSwidWlkIjoiNTAyMTA0MjkzIiwidHMiOjE2MjQ0NDI1ODExOTcsInl1IjoiNTM5MzE0OTMyMTU5MzA5MzU3OCJ9</p>
