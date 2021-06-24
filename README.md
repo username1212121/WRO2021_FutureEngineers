@@ -6,8 +6,8 @@ Our robot is a four-wheeled vehicle with differential rotation of the rear wheel
 
 <h3>Major Components and Parts</h3>
 	<ul><li>Arduino Uno Board</li>
-	<li>Ultrasonic Range Finder HC-SR04	</li>
-	<li>Applied Robotics TrackingCam 	</li> 
+	<li>Ultrasonic Range Finder HC-SR04</li>
+	<li>Applied Robotics TrackingCam</li> 
 	<li>Encoders</li></ul>
 	
 <h3>Arduino Uno Board</h3>
@@ -42,3 +42,7 @@ Our robot is a four-wheeled vehicle with differential rotation of the rear wheel
 <h3>Encoders</h3>
 	<p>We use Encoders to calculate the passed distance, for this we use PinChangeInterrupt library.</br>
   	You can read about this library here https://www.arduino.cc/reference/en/libraries/pinchangeinterrupt/</p>
+
+<h3>People who worked on this project</h3>
+	<ul><li>Konstantin Orlik - engineer</li>
+	<li>Korobkina Arina - programmer</li></ul>
