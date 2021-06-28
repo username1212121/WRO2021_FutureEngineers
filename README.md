@@ -44,5 +44,5 @@ Our robot is a four-wheeled vehicle with differential rotation of the rear wheel
   	You can read about this library here https://www.arduino.cc/reference/en/libraries/pinchangeinterrupt/</p>
 
 <h3>People who worked on this project</h3>
-	<ul><li>Konstantin Orlik - engineer</li>
-	<li>Korobkina Arina - programmer</li></ul>
+	<ul><li>Konstantin Orlik</li>
+	<li>Korobkina Arina</li></ul>
