@@ -2,7 +2,35 @@
 <p>Innopolis Open Robotics Olympiad 2021 Future engineers WRO’s Self-driving vehicle challenge.</p>
 <p>We created this robot to participate in World Robot Olympiad 2021 Future Engineers WRO’s Self-driving vehicle challenge.
 Our robot is a four-wheeled vehicle with differential rotation of the rear wheelset, it also has Camera and Ultrasonic sensors.</p>
+
 <p>Rulles of World Robot Olympiad 2021 Future Engineers WRO’s Self-driving vehicle challenge can be found here https://wro-association.org/fileadmin/files/challenges/2021-power-bots-energy/WRO-2021-Future-Engineers-01-Game-Rules.pdf</p>
+
+<h3>Photos of the robot from different sides</h3>
+</ul><li>Front view</li>
+	
+![Image of robot1](https://github.com/Glaurung2000/images/blob/master/IMG_20210628_201413.jpg)
+
+<li>Left view</li>
+	
+![Image of robot2](https://github.com/Glaurung2000/images/blob/master/IMG_20210628_201419.jpg)
+	
+<li>Back view</li>
+
+![Image of robot3](https://github.com/Glaurung2000/images/blob/master/IMG_20210628_201424.jpg)
+
+<li>Right view</li>
+	
+![Image of robot3](https://github.com/Glaurung2000/images/blob/master/IMG_20210628_201429.jpg)
+
+<li>Bottom view</li>
+
+![Image of robot3](https://github.com/Glaurung2000/images/blob/master/IMG_20210628_201455.jpg)
+
+<li>View from above</li>
+	
+![Image of robot3](https://github.com/Glaurung2000/images/blob/master/IMG_20210628_201436.jpg)
+
+</ul>
 
 <h3>Major Components and Parts</h3>
 	<ul><li>Arduino Uno Board</li>
