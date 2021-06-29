@@ -49,7 +49,7 @@ Our robot is a four-wheeled vehicle with differential rotation of the rear wheel
 
 
 <h3>Ultrasonic Range Finder HC-SR04</h3>
-	<p>We use three Ultrasonic Range Finders HC-SR04 to determine the distance to the field borders in front of the robot and to the left and to the right of it.
+	<p>We use five Ultrasonic Range Finders HC-SR04 to determine the distance to the field borders in front of the robot and to the left and to the right of it.
 	To process the data come from HC-SR04 to Arduino Uno Board we use NewPing library.</br>
   	You can read about it here https://www.arduino.cc/reference/en/libraries/newping/</br>
 	About Ultrasonic sensor http://wiki.amperka.ru/%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D1%8B:hc-sr04-ultrasonic-sensor-distance-module</p>
