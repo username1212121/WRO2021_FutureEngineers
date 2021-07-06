@@ -116,7 +116,7 @@ void loop() {
       //Serial.println();
     }
     clockwise = (cm[right] > 150);
-    /*
+    /* // Code for 5 sensors
     int l_max = (cm[left]>cm[left_back])?cm[left]:cm[left_back], l_min = (cm[left]<cm[left_back])?cm[left]:cm[left_back];
     int r_max = (cm[right]>cm[right_back])?cm[right]:cm[right_back], r_min = (cm[right]<cm[right_back])?cm[right]:cm[right_back];
 
@@ -198,7 +198,7 @@ void camRead() {
   bool cube_presence = false;
   int tmp_nearest_cube = -1;
   for (int i = 0; i < n; i++) { // finding nearest cube
-    if (trackingCam.blob[i].type < 2) { // red(0) & green colors(1)
+    if (trackingCam.blob[i].type < 2) { //colors: red(1) & green(0)
       if (!cube_presence) {
         cube_presence = true;
         tmp_nearest_cube = i;
