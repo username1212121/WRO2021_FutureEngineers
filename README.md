@@ -4,3 +4,5 @@
 Our robot is a four-wheeled vehicle with differential rotation of the rear wheelset, it also has Camera and Ultrasonic sensors.</p>
 
 <p>Rulles of World Robot Olympiad 2021 Future Engineers WRO’s Self-driving vehicle challenge can be found here https://wro-association.org/fileadmin/files/challenges/2021-power-bots-energy/WRO-2021-Future-Engineers-01-Game-Rules.pdf</p>
+
+<p>This code exists for emergency plan, it requires another robot</p>
