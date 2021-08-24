@@ -100,7 +100,7 @@ void setup() {
 void loop() {
 
   while (turns < 12) {
-    //camRead();
+    camRead();
     Sensor_read();
     if(DEBUG){
         Serial.print("rf - ");
@@ -136,7 +136,7 @@ void loop() {
      if(DEBUG){
       Serial.print(r_sens);
       Serial.print("  l - ");
-      Serial.println(l_sens);
+      Serial.print(l_sens);
      }
     
     l_sens = (cm[left] > 100) ? 45 : cm[left];
@@ -150,6 +150,10 @@ void loop() {
 
     cube_shift = r_cube ? -5 : g_cube ? 5 : 0;
     angle = pid(l_sens - r_sens - cube_shift);
+    if (DEBUG) {
+      Serial.print("\t angle - ");
+      Serial.println(angle);  
+    }
     angle = angle > 30 ? 30 : angle;
     angle = angle < -30 ? -30 : angle;
     if (turn_check) {
