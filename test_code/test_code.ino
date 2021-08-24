@@ -1,4 +1,4 @@
-/* Camera settings: Blob detector, I2C, addr 50, Dynamixel API, 5V.
+/* Camera settings: Blob detector, I2C, addr 50, Dynamixel API, 5V. 
    Wiring:
          Camera         Arduino Camera
    1-VF >|O O|  2-+5      SCL  -  IC0
