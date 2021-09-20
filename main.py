@@ -66,6 +66,7 @@ CK = 1.35
 clockwize = f
 turning = f
 extra_turning = f
+GLOBAL_ERROR = 0
 
 def map(x, in_min, in_max, out_min, out_max):
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
@@ -177,8 +178,8 @@ while(True):
             if blob.elongation() > 0.6:
                 turning = True
                 if Debug: img.draw_rectangle(blob.rect(), color = purple)
-        for blob in img.find_blobs(black_wall, pixels_threshold=10, area_threshold=10, roi = (45, 30, 70, 15)):
-            if blob.area() * blob.density() > 800:
+        for blob in img.find_blobs(black_wall, pixels_threshold=10, area_threshold=10, roi = (43, 35, 74, 10)):
+            if blob.area() * blob.density() > 650:
                 extra_turning = True
                 if Debug: img.draw_rectangle(blob.rect(), color = pink)
     if Debug:
@@ -234,7 +235,7 @@ while(True):
         if new_value < right_angle: new_value = right_angle
     drive(new_value)
     if Debug: print("new_value " + str(new_value))
-    if turning and (previous_turning_time < millis()):
+    if (turning or extra_turning)and (previous_turning_time < millis()):
         previous_turning_time = millis() + 3500
         turns += 1
         r_led.toggle()
