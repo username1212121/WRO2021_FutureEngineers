@@ -62,7 +62,7 @@ DRV8833 Dual H-Bridge Motor Driver datasheet https://www.ti.com/lit/ds/symlink/d
 
 ![Image of Motor drive](https://github.com/Glaurung2000/images/blob/master/motor.jpg)
 
-<p>You can read more about it here https://www.pololu.com/category/60/micro-metal-gearmotors</br>
+<p>You can read more about it here https://www.pololu.com/category/60/micro-metal-gearmotors </br>
  Micro Metal Gearmotor datasheet https://www.pololu.com/file/0J1487/pololu-micro-metal-gearmotors_rev-5-0.pdf</p>
 
 
