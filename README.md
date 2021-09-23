@@ -70,9 +70,9 @@ DRV8833 Dual H-Bridge Motor Driver datasheet https://www.ti.com/lit/ds/symlink/d
 <p>Download all 3d models, print them, then assemble a robot from all printed parts and electronic components.</p>
 
 <h3>Install Software</h3>
-<ul><li>**Install Software on PC**</li>
+<ul><li><h4>Install Software on PC</h4></li>
 <p>Download OpenMV IDE https://openmv.io/pages/download</p>
-<li>**Install Software on OpenMV Cam**</li>
+<li><h4>Install Software on OpenMV Cam</h4></li>
 <p>Download main.py, start OpenMV IDE, connect your OpenMV Cam to PC by USB cabel, press Ctrl+E to set connection. Then open the script, click Tools -> 
 Save open script to OpenMV Cam, wait until script is uploaded. Now you can disconnect the robot, turn it on and press the start button to start the script.</p></ul>
 
