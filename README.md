@@ -1,4 +1,6 @@
 # IORO2021 FutureEngineers
+<h3>Team SHP-1</h3>
+
 <p>Innopolis Open Robotics Olympiad 2021 Future engineers WRO’s Self-driving vehicle challenge.</p>
 <p>We created this robot to participate in World Robot Olympiad 2021 Future Engineers WRO’s Self-driving vehicle challenge.
 Our robot is a four-wheeled vehicle with differential rotation of the rear wheelset, it also has сamera.</p>
