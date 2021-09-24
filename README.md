@@ -84,6 +84,9 @@ Assemble the parts according to the model in the file on the screws. Attach and 
 <p>Download main.py, start OpenMV IDE, connect your OpenMV Cam to PC by USB cabel, press Ctrl+E to set connection. Then open the script, click Tools -> 
 Save open script to OpenMV Cam, wait until script is uploaded. Now you can disconnect the robot, turn it on and press the start button to start the script.</p></ul>
 
+<h3>Video from robot</h3>
+
+![gif](https://github.com/Glaurung2000/IORO2021_FutureEngineers/blob/main/video_from_robot.gif)
 
 <h3>People who worked on this project</h3>
 	<ul><li>Orlik Konstantin</li>
