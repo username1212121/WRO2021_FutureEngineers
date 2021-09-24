@@ -66,9 +66,9 @@ DRV8833 Dual H-Bridge Motor Driver datasheet https://www.ti.com/lit/ds/symlink/d
  Micro Metal Gearmotor datasheet https://www.pololu.com/file/0J1487/pololu-micro-metal-gearmotors_rev-5-0.pdf</p>
 
 
-<h3>Building the robot</h3>
-<p>Download all 3d models from https://drive.google.com/file/d/1_UNiahOaS35TVOCJVjR7OqnBZfQEMFMj/view?usp=drivesdk </br>
-Print them, then assemble a robot from all printed parts and electronic components.</p>
+<h3>Assembly of the robot</h3>
+<p> Print out the parts on a 3D printer or otherwise make them from a file https://drive.google.com/file/d/18QiRaBWn18fe4b0wueTM7BMKxZXjLAZl/view?usp=drivesdk </br>
+Assemble the parts according to the model in the file on the screws. Attach and connect the electronics(camera, motor driver, motor, servo and battery).</p>
 
 <h3>Install Software</h3>
 <ul><li><h4>Install Software on PC</h4></li>
