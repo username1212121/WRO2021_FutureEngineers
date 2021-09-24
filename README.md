@@ -5,6 +5,9 @@ Our robot is a four-wheeled vehicle with differential rotation of the rear wheel
 
 <p>Rulles of World Robot Olympiad 2021 Future Engineers WRO’s Self-driving vehicle challenge can be found here https://wro-association.org/fileadmin/files/challenges/2021-power-bots-energy/WRO-2021-Future-Engineers-01-Game-Rules.pdf</p>
 
+<h3>Video with our robot</h3>
+<p>https://www.youtube.com/watch?v=qzl_4r_2yAc&feature=youtu.be</p>
+
 <h3>Photos of the robot from different sides</h3>
 <ul><li>Front view</li>
 	
@@ -81,3 +84,8 @@ Save open script to OpenMV Cam, wait until script is uploaded. Now you can disco
 <h3>People who worked on this project</h3>
 	<ul><li>Orlik Konstantin</li>
 	<li>Korobkina Arina</li></ul>
+
+![Image of Motor drive](https://github.com/Glaurung2000/images/blob/master/photo_2021-09-24_12-39-30.jpg)
+
+![Image of Motor drive](https://github.com/Glaurung2000/images/blob/master/photo_2021-09-24_12-39-10.jpg)
+
