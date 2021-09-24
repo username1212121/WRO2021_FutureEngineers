@@ -67,7 +67,8 @@ DRV8833 Dual H-Bridge Motor Driver datasheet https://www.ti.com/lit/ds/symlink/d
 
 
 <h3>Building the robot</h3>
-<p>Download all 3d models, print them, then assemble a robot from all printed parts and electronic components.</p>
+<p>Download all 3d models from https://drive.google.com/file/d/1_UNiahOaS35TVOCJVjR7OqnBZfQEMFMj/view?usp=drivesdk </br>
+Print them, then assemble a robot from all printed parts and electronic components.</p>
 
 <h3>Install Software</h3>
 <ul><li><h4>Install Software on PC</h4></li>
