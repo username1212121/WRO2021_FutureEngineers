@@ -77,7 +77,8 @@ Assemble the parts according to the model in the file on the screws. Attach and 
 
 <h3>Scheme of robot</h3>
 
-![Image of scheme](https://github.com/Glaurung2000/IORO2021_FutureEngineers/blob/main/photo/Main.pdf)
+![Image of robot](https://github.com/Glaurung2000/IORO2021_FutureEngineers/blob/main/photo/Main.pdf)
+
 
 <h3>Scheme of electronic components</h3>
 
