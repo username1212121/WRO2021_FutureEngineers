@@ -51,7 +51,7 @@ Read more about how to control a servo using OpenMV here https://docs.openmv.io/
 ![Image of Motor drive](https://github.com/Glaurung2000/images/blob/master/DRV8833.jpg)
 
 <p>The DRV8833 driver allows you to drive a brushed motor or a single stepper motor.</br>
-We use it to control the speed and direction of rotation of the motor, for this we send two signals from the camera to the motor driver, one of the nights is 0 or 1 (the direction of rotation of the motor depends on this), and the second value is from 0 to 100 (where 0 is the maximum speed, and 100 is the stop), we use pulse width modulation to pass the second value, for this we use the Timer from the pyb module.</p> 
+We use it to control the speed and direction of rotation of the motor, for this we send two signals from the camera to the motor driver, one of the values is 0 or 1 (the direction of rotation of the motor depends on this), and the second value is from 0 to 100 (where 0 is the maximum speed, and 100 is the stop), we use pulse width modulation to pass the second value, for this we use the Timer from the pyb module.</p> 
 
 <p>Aabout pyb https://docs.openmv.io/library/pyb.Timer.html?highlight=pwm</br>
 About DRV8833 https://iarduino.ru/shop/Expansion-payments/drayver-motorov-dvuhkanalnyy-drv8833.html</br>
