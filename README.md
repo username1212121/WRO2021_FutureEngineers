@@ -74,7 +74,8 @@ DRV8833 Dual H-Bridge Motor Driver datasheet https://www.ti.com/lit/ds/symlink/d
 Assemble the parts according to the model in the file on the screws. Attach and connect the electronics (camera, motor driver, motor, servo and battery).</p>
 
 <h3>Scheme of electronic components</h3>
-![Image of Motor drive](https://github.com/Glaurung2000/images/blob/master/scheme.png)
+
+![Image of scheme](https://github.com/Glaurung2000/images/blob/master/scheme.png)
 
 <h3>Install Software</h3>
 <ul><li><h4>Install Software on PC</h4></li>
@@ -88,7 +89,7 @@ Save open script to OpenMV Cam, wait until script is uploaded. Now you can disco
 	<ul><li>Orlik Konstantin</li>
 	<li>Korobkina Arina</li></ul>
 
-![Image of Motor drive](https://github.com/Glaurung2000/images/blob/master/photo_2021-09-24_12-39-30.jpg)
+![Image 1](https://github.com/Glaurung2000/images/blob/master/photo_2021-09-24_12-39-30.jpg)
 
-![Image of Motor drive](https://github.com/Glaurung2000/images/blob/master/photo_2021-09-24_12-39-10.jpg)
+![Image 2](https://github.com/Glaurung2000/images/blob/master/photo_2021-09-24_12-39-10.jpg)
 
