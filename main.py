@@ -10,11 +10,7 @@ FALSE = False
 f = False
 F = False
 usb = pyb.USB_VCP()
-
-
 Debug = True
-
-
 red_ang_green_cubes = True
 black_wallse = True
 detect_turns = True
@@ -47,15 +43,13 @@ light_grey = (180, 180, 180)
 purple = (120, 0, 153)
 thresholds = [
               (20, 80, -80, -30, 30, 80),
-              (30, 60,  60, 89, 40, 70)]
+              (30, 55,  60, 89, 40, 70)]
 black_wall = [(0, 15, -5, 5, -5, 5)]
 turning_lines = [(70, 98, -27, 17, 40, 95)]
 blue_lines = [(30, 70, -40, 80, -110, -5)]
-
-straight_angle = 1300
-right_angle = straight_angle - 450
-left_angle = straight_angle + 450
-
+straight_angle = 1350
+right_angle = straight_angle - 350
+left_angle = straight_angle + 350
 cube_bypassing = f
 negative_value = f
 button_state = f
@@ -68,7 +62,7 @@ last_click_time = 0
 stop_time = 0
 previous_turning_time = 0
 cube_bypassing_time = 0
-WK = 1.1
+WK = 1.15
 CK = 1.35
 clockwize = f
 turning = f
@@ -77,7 +71,6 @@ global_error = 0
 first_line = True
 direction = ''
 checker = True
-
 def emergency_stop():
     s1.pulse_width(straight_angle)
     IN3.pulse_width_percent(0)
@@ -87,7 +80,6 @@ def emergency_stop():
     g_led.on()
     b_led.off()
     while(True): pass
-
 def map(x, in_min, in_max, out_min, out_max):
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
 def drive(angle):
@@ -105,34 +97,26 @@ def drive(angle):
         if extra_turning:
             b_led.off()
             g_led.on()
-            if (clockwize and (angle < straight_angle)): angle = right_angle + 50
-            elif (not(clockwize) and (angle > straight_angle)): angle = left_angle - 50
+            if (clockwize and (angle < straight_angle)): angle = right_angle + 110
+            elif (not(clockwize) and (angle > straight_angle)): angle = left_angle - 110
         elif turning:
-            if (clockwize and (angle < straight_angle)): angle = straight_angle - 100
-            elif (not(clockwize) and (angle > straight_angle)): angle = straight_angle + 100
+            if (clockwize and (angle < straight_angle)): angle = straight_angle - 140
+            elif (not(clockwize) and (angle > straight_angle)): angle = straight_angle + 140
         s1.pulse_width(int(angle))
         time.sleep_ms(50)
         global_error += int(angle) - straight_angle
-        #f = open('logdata.txt', 'a+')
-        #f.write(str(global_error) + " " + str(millis()) + " " + str(turns) + "\n")
-        #f.close()
         if Debug: print("angle " + str(int(angle)))
         IN3.pulse_width_percent(100)
         IN4.pulse_width_percent(robot_speed)
         g_led.off()
-
-#f = open('logdata.txt', 'w')
-#f.write(" \n START \n")
-#f.close()
-
 name = "/" + str(pyb.rng()) + ".bin"
 print(name)
 stream = image.ImageIO(name, "w")
-
+#stream = image.ImageIO("/112349354.bin", "r")
 while(True):
- #try:
     lines = list()
     clock.tick()
+    #img = stream.read(copy_to_fb=True, loop=True, pause=True)
     img = sensor.snapshot()
     img = img.gaussian(3)
     img = img.gamma_corr(gamma = 0.3, contrast = 18.0, brightness = 0.1)
@@ -143,23 +127,23 @@ while(True):
     if red_ang_green_cubes:
         i = 0
         b_led.off()
-        for blob in img.find_blobs(thresholds, pixels_threshold=20, area_threshold=20, roi = (0, 29, 160, 80)):
+        for blob in img.find_blobs(thresholds, pixels_threshold=20, area_threshold=20, roi = (0, 29, 1, 1)): # 160, 80
             if (blob.elongation() > 0.9)or(blob.density() < 0.4)or(blob.area() < 60)  \
             or((blob.h()/ blob.w()) < 0.6)or((blob.code()==1)and(blob.x()>135))or((blob.code()==2)and((blob.x()+blob.w())<25)):
                 if Debug: img.draw_rectangle(blob.rect(), color = yellow)
                 if Debug and t:
                     print("X")
                     print(str(blob.code()) + " " + str((blob.x()+blob.w())/2))
-                    print("Линия на " + str(int(blob.elongation()*100)) + "%")
-                    print("Заполнение " + str(int(blob.density()*100)) + "%")
-                    print("Пиксели " + str(int(blob.area() * blob.density())))
+                    print("Р›РёРЅРёСЏ РЅР° " + str(int(blob.elongation()*100)) + "%")
+                    print("Р—Р°РїРѕР»РЅРµРЅРёРµ " + str(int(blob.density()*100)) + "%")
+                    print("РџРёРєСЃРµР»Рё " + str(int(blob.area() * blob.density())))
                     print(blob.h()/ blob.w())
             else:
                 if Debug and t:
                     print("V")
-                    print("Линия на " + str(int(blob.elongation()*100)) + "%")
-                    print("Заполнение " + str(int(blob.density()*100)) + "%")
-                    print("Пиксели " + str(int(blob.area() * blob.density())))
+                    print("Р›РёРЅРёСЏ РЅР° " + str(int(blob.elongation()*100)) + "%")
+                    print("Р—Р°РїРѕР»РЅРµРЅРёРµ " + str(int(blob.density()*100)) + "%")
+                    print("РџРёРєСЃРµР»Рё " + str(int(blob.area() * blob.density())))
                     print(blob.h()/ blob.w())
                 b_led.off()
                 if i == 0:
@@ -205,6 +189,7 @@ while(True):
                     right_black_area = new_black_area
             j+=1
         walls_error = int(left_black_area - right_black_area)
+        
         turning = False
         extra_turning = False
         if detect_turns:
@@ -214,9 +199,6 @@ while(True):
                     if first_line:
                         clockwize =  True
                         first_line = False
-                        #f = open('logdata.txt', 'a+')
-                        #f.write("COLCKWIZE: " + str(clockwize) + "\n")
-                        #f.close()
                         direction = "CLOCKWIZE"
                     if Debug: img.draw_rectangle(blob.rect(), color = purple)
             for blob in img.find_blobs(blue_lines, pixels_threshold=30, area_threshold=30, roi = (0, 50, 160, 52)):
@@ -225,9 +207,6 @@ while(True):
                     if first_line:
                         clockwize =  False
                         first_line = False
-                        #f = open('logdata.txt', 'a+')
-                        #f.write("COLCKWIZE: " + str(clockwize) + "\n")
-                        #f.close()
                         direction = "CONTRCLOCKWIZE"
                     if Debug: img.draw_rectangle(blob.rect(), color = purple)
             for blob in img.find_blobs(black_wall, pixels_threshold=10, area_threshold=10, roi = (45, 20, 70, 11)):
@@ -249,7 +228,7 @@ while(True):
                 if nearest_cube.code() == 2:
                     str_color_name = "red"
                 print("cube error: " + str(cube_error))
-                img.draw_string(nearest_cube.x(), nearest_cube.y()-7, str_color_name, color = grey, scale = 4, mono_space = False,
+                img.draw_string(nearest_cube.x(), nearest_cube.y()-7, str_color_name, color = pink, scale = 4, mono_space = False,
                                 char_rotation = 0, char_hmirror = False, char_vflip = False,
                                 string_rotation = 0, string_hmirror = False, string_vflip = False)
             img.draw_string(5, 100, direction, color = light_grey, scale = 1, mono_space = False,
@@ -258,7 +237,6 @@ while(True):
             img.draw_string(130, 90, str(turns), color = light_grey, scale = 2, mono_space = False,
                             char_rotation = 0, char_hmirror = False, char_vflip = False,
                             string_rotation = 0, string_hmirror = False, string_vflip = False)
-
             print("FPS %f" % clock.fps())
         button_state = button.value()
         if (millis() > finish_time):
@@ -273,7 +251,7 @@ while(True):
                 stop_time = 0
             last_click_time = millis() + 1000
         if (turns == 12)and(checker == True):
-            finish_time = millis() + 2000
+            finish_time = millis() + 1800
             checker = False
         if turns > 12: emergency_stop()
         new_value = straight_angle
@@ -296,33 +274,16 @@ while(True):
             new_value = map(-value, -160, 160, right_angle, left_angle)
             if new_value > left_angle: new_value = left_angle
             if new_value < right_angle: new_value = right_angle
-            #f = open('logdata.txt', 'a+')
-            #f.write(str(nearest_cube.code()) + "CUBE " +  str((blob.x()+blob.w())/2) + " \n")
-            #f.close()
         drive(new_value)
         if Debug: print("new_value " + str(new_value))
         if turning and (previous_turning_time < millis()):
-            previous_turning_time = millis() + 2800
+            previous_turning_time = millis() + 2200
             turns += 1
             r_led.toggle()
-
-
     stream.write(img)
-    if millis() > 80000:
+    if millis() > 90000:
         r_led.on()
         g_led.on()
         b_led.off()
         stream.close()
         while(True): pass
-
- #except BaseException:
- #   g_led.on()
- #   r_led.on()
- #   b_led.on()
- #   s1.pulse_width(straight_angle)
- #   IN3.pulse_width_percent(0)
- #   IN4.pulse_width_percent(0)
-    #stream.close()
- #   while(true):
- #       pass
-
