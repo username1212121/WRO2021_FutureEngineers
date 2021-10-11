@@ -77,7 +77,7 @@ Assemble the parts according to the model in the file on the screws. Attach and 
 
 <h3>Scheme of robot</h3>
 
-![Image of robot](https://github.com/username1212121/WRO2021_FutureEngineers/blob/main/Robot%20Drawing%20v1.pdf)
+![Image of robot](https://github.com/username1212121/WRO2021_FutureEngineers/blob/main/Robot.png)
 
 
 <h3>Scheme of electronic components</h3>
